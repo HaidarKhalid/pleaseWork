@@ -38,6 +38,9 @@ app.use(xss())
 // extra packages
 
 // routes
+app.get('/', (req,res)=> {
+  res.send('hello this is working')
+})
 app.use('/api/v1/auth', authFunctions)
 app.use('/api/v1/jobs',authenticationUser, jobsFunctions)
 
